@@ -13,7 +13,10 @@
       user_name: {
         start: ['profile_pic', 'end', 16],
         top: ['profile_pic', 'top'],
-        bottom: ['profile_pic', 'bottom']
+        bottom: ['profile_pic', 'bottom'],
+        custom: {
+          background_text: '#08FF04'
+        }
       },
       box: {
         width: 'spread',
@@ -21,7 +24,10 @@
         start: ['parent','start'],
         end: ['parent','end'],
         top: ['parent','top'],
-        bottom: ['parent','bottom', -16]
+        bottom: ['parent','bottom', -16],
+        custom: {
+          background_box: '#444444'
+        }
       }
     },
     end: {
@@ -38,7 +44,10 @@
       user_name: {
         start: ['parent', 'start'],
         top: ['profile_pic', 'bottom', 16],
-        end: ['parent', 'end']
+        end: ['parent', 'end'],
+        custom: {
+          background_text: '#FFFFFF'
+        }
       },
       box: {
         width: 'spread',
@@ -46,7 +55,10 @@
         start: ['parent','start'],
         end: ['parent','end'],
         top: ['parent','top'],
-        bottom: ['parent','bottom', -16]
+        bottom: ['parent','bottom', -16],
+        custom: {
+          background_box: '#08FF04'
+        }
       }
     }
   },
@@ -64,7 +76,7 @@
           {
             target: ['user_name'],
             frames: [0, 50, 100],
-            translationX: [0, 100, 0]
+            translationX: [0, 80, 0]
           }
         ]
       }

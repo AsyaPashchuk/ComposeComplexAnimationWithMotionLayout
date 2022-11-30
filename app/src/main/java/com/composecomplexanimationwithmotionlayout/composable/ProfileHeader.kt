@@ -38,11 +38,13 @@ fun ProfileHeader(progress: Float) {
         modifier = Modifier.fillMaxWidth()
     ) {
         //Get the custom property from motion_scene.json5
-        val properties = motionProperties(id = "profile_pic")
+        val propertiesProfile = motionProperties(id = "profile_pic")
+        val propertiesTextUnit = motionProperties(id = "user_name")
+        val propertiesBox = motionProperties(id = "box")
 
         Box(modifier = Modifier
             .fillMaxWidth()
-            .background(Color.DarkGray)
+            .background(propertiesBox.value.color("background_box"))
             .layoutId("box")
         )
         Image(
@@ -52,7 +54,7 @@ fun ProfileHeader(progress: Float) {
                 .clip(CircleShape)
                 .border(
                     width = 2.dp,
-                    color = properties.value.color("background"),
+                    color = propertiesProfile.value.color("background"),
                     shape = CircleShape
                 )
                 .layoutId("profile_pic")
@@ -61,7 +63,7 @@ fun ProfileHeader(progress: Float) {
             text = "Asya",
             fontSize = 16.sp,
             modifier = Modifier.layoutId("user_name"),
-            color = properties.value.color("background")
+            color = propertiesTextUnit.value.color("background_text")
         )
     }
 }

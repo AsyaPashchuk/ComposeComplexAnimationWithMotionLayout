@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     var progressState by remember {
                         mutableStateOf(0f)
                     }
-                    
+
                     ProfileHeader(progress = progressState)
                     Spacer(modifier = Modifier.height(32.dp))
                     Slider(
